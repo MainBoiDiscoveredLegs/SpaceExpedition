@@ -94,37 +94,37 @@ var boxCaps = 0;
 
 function preload() {
     //Starting Screen
-    monBdyIMG = loadImage("Images/monkeyFullBody.png");
+    monBdyIMG = loadImage("monkeyFullBody.png");
 
     //sounds
-    bgmsc = loadSound('Sounds/Dimple.mp3');
-    click = loadSound('Sounds/click.mp3');
-    drop = loadSound('Sound/drop.mp3');
-    inBox = loadSound('Sounds/inBox.mp3');
-    money = loadSound('Sounds/money.mp3');
-    winmsc = loadSound('Sounds/WIN.mp3');
+    bgmsc = loadSound('Dimple.mp3');
+    click = loadSound('click.mp3');
+    drop = loadSound('drop.mp3');
+    inBox = loadSound('inBox.mp3');
+    money = loadSound('money.mp3');
+    winmsc = loadSound('WIN.mp3');
 
     //Levels Screen
-    earthIMG = loadImage("Images/Earth.png");
-    marsIMG = loadImage("Images/Mars.png");
-    rocketIMG = loadImage("Images/rocket.png");
-    infoMonkeIMG = loadImage('Images/InfoMonke.png');
+    earthIMG = loadImage("Earth.png");
+    marsIMG = loadImage("Mars.png");
+    rocketIMG = loadImage("rocket.png");
+    infoMonkeIMG = loadImage('InfoMonke.png');
 
     //shop
-    buyRockerIMG = loadImage("Images/roketShip.png");
-    buyShooterIMG = loadImage("Images/shooter.png");
-    buyCapIMG = loadImage("Images/cap.png");
+    buyRockerIMG = loadImage("roketShip.png");
+    buyShooterIMG = loadImage("shooter.png");
+    buyCapIMG = loadImage("cap.png");
 
     //Lvl1
-    monkeyIMG = loadImage('Images/Monkey.png');
+    monkeyIMG = loadImage('Monkey.png');
 
-    sellerIMGL = loadImage('Images/capSellerIMG.png');
-    sellerIMGR = loadImage('Images/capSellerIMGR.png');
+    sellerIMGL = loadImage('capSellerIMG.png');
+    sellerIMGR = loadImage('capSellerIMGR.png');
 
-    capIMGL = loadImage('Images/redCap-removebg-preview.png');
-    capIMGR = loadImage('Images/blueCap-removebg-preview.png');
+    capIMGL = loadImage('redCap-removebg-preview.png');
+    capIMGR = loadImage('blueCap-removebg-preview.png');
 
-    boxIMG = loadImage('Images/redBox-removebg-preview.png');
+    boxIMG = loadImage('redBox-removebg-preview.png');
 
 
 }
