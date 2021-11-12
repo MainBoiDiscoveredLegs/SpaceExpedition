@@ -10,6 +10,9 @@ var drop;
 var inBox;
 var winmsc;
 
+var dropING = 'no';
+var winsd = 'no';
+
 //Starting Screen
 var monBdyIMG;
 var monBdy;
@@ -573,15 +576,16 @@ function draw() {
         monkey1.collide(door);
         door.collide(bottom);
 
-        if(monkey1.isTouching(stariSens) || capSeller.isTouching(stariSens)){
+        if (monkey1.isTouching(stariSens) || capSeller.isTouching(stariSens)) {
+            //click?
             door.velocityY = -5;
-        }else{
+        } else {
             door.velocityY = +10;
         }
 
 
         if (monkey1.isTouching(lever)) {
-            click.play();
+            //click?
             leverClicked = 'true';
         }
 
@@ -639,32 +643,29 @@ function draw() {
         }
 
         if (keyDown('SPACE') && monkey1Touching === 'cap1') {
-            drop.play();
+            dropING = 'yes';
             cap1.velocityY = +10;
-            // monkey1Touching = 'dropped'
         } else if (monkey1.isTouching(cap1)) {
-            drop.play();
+            dropING = 'yes';
             cap1.y = monkey1.y - 40;
             cap1.x = monkey1.x;
             monkey1Touching = 'cap1'
         }
 
         if (keyDown('SPACE') && monkey1Touching === 'cap2') {
-            drop.play();
+            dropING = 'yes';
             cap2.velocityY = +10;
-            // monkey1Touching = 'dropped'
         } else if (monkey1.isTouching(cap2)) {
-            drop.play();
+            dropING = 'yes';
             cap2.y = monkey1.y - 40;
             cap2.x = monkey1.x;
             monkey1Touching = 'cap2'
         }
         if (keyDown('SPACE') && monkey1Touching === 'cap3') {
-            drop.play();
+            dropING = 'yes';
             cap3.velocityY = +10;
-            // monkey1Touching = 'dropped'
         } else if (monkey1.isTouching(cap3)) {
-            drop.play();
+            dropING = 'yes';
             cap3.y = monkey1.y - 40;
             cap3.x = monkey1.x;
             monkey1Touching = 'cap3'
@@ -707,7 +708,7 @@ function draw() {
 
         if (boxCaps === 3) {
 
-            winmsc.play();
+            winsd = 'yes';
             noStroke();
             fill(241, 146, 48, 191);
             rect(0, 0, displayWidth, displayHeight);
@@ -723,6 +724,15 @@ function draw() {
 
             capCount = '3';
 
+        }
+
+        if (winsd === 'yes') {
+            winmsc.play();
+            winsd = 'no';
+        }
+
+        if (dropING === 'yes') {
+            drop.play();
         }
 
         backButton.mousePressed(function () {
@@ -753,8 +763,9 @@ function draw() {
         stariSens.visible = false;
         door.visible = false;
         resetButton.hide();
-        backButton.position(1050,581);
+        backButton.position(1050, 581);
     }
+
 
     if (gameState === "LVL2") {
 
