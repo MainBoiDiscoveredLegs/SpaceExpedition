@@ -10,7 +10,8 @@ var drop;
 var inBox;
 var winmsc;
 
-var dropING = 'no';
+var dropING1 = 'no';
+var dropING1 = 'no';
 var winsd = 'no';
 
 //Starting Screen
@@ -643,29 +644,43 @@ function draw() {
         }
 
         if (keyDown('SPACE') && monkey1Touching === 'cap1') {
-            dropING = 'yes';
+            
+            if(dropING4 === 'no'){
+            dropING4 = 'yes';
+            }
             cap1.velocityY = +10;
         } else if (monkey1.isTouching(cap1)) {
-            dropING = 'yes';
+            if(dropING1 === 'no'){
+            dropING1 = 'yes';
+            }
             cap1.y = monkey1.y - 40;
             cap1.x = monkey1.x;
             monkey1Touching = 'cap1'
         }
 
         if (keyDown('SPACE') && monkey1Touching === 'cap2') {
-            dropING = 'yes';
+            if(dropING5 === 'no'){
+            dropING5 = 'yes';
+            }
             cap2.velocityY = +10;
         } else if (monkey1.isTouching(cap2)) {
-            dropING = 'yes';
+            if(dropING2 === 'no'){
+            dropING2 = 'yes;
+            }
             cap2.y = monkey1.y - 40;
             cap2.x = monkey1.x;
             monkey1Touching = 'cap2'
         }
         if (keyDown('SPACE') && monkey1Touching === 'cap3') {
-            dropING = 'yes';
+            if(dropING6 === 'no'){
+            dropING6 = 'yes';
+            }
             cap3.velocityY = +10;
         } else if (monkey1.isTouching(cap3)) {
-            dropING = 'yes';
+            if(dropING3 === 'no'){
+            dropING3 = 'yes'
+            }
+                    
             cap3.y = monkey1.y - 40;
             cap3.x = monkey1.x;
             monkey1Touching = 'cap3'
@@ -707,8 +722,11 @@ function draw() {
 
 
         if (boxCaps === 3) {
+            
+            if(winsd === 'no'){
 
             winsd = 'yes';
+            }
             noStroke();
             fill(241, 146, 48, 191);
             rect(0, 0, displayWidth, displayHeight);
@@ -728,12 +746,32 @@ function draw() {
 
         if (winsd === 'yes') {
             winmsc.play();
-            winsd = 'no';
+            winsd = 'nope';
         }
 
-        if (dropING === 'yes') {
+        if (dropING1 === 'yes') {
             drop.play();
-            dropING = 'no';
+            dropING1 = 'nope';
+        }
+        if (dropING2 === 'yes') {
+            drop.play();
+            dropING2 = 'nope';
+        }
+        if (dropING3 === 'yes') {
+            drop.play();
+            dropING3 = 'nope';
+        }
+        if (dropING4 === 'yes') {
+            drop.play();
+            dropING4 = 'nope';
+        }
+        if (dropING5 === 'yes') {
+            drop.play();
+            dropING5 = 'nope';
+        }
+        if (dropING6 === 'yes') {
+            drop.play();
+            dropING6 = 'nope';
         }
 
         backButton.mousePressed(function () {
