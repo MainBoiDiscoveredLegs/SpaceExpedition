@@ -11,7 +11,11 @@ var inBox;
 var winmsc;
 
 var dropING1 = 'no';
-var dropING1 = 'no';
+var dropING2 = 'no';
+var dropING3 = 'no';
+var dropING4 = 'no';
+var dropING5 = 'no';
+var dropING6 = 'no';
 var winsd = 'no';
 
 //Starting Screen
@@ -665,7 +669,7 @@ function draw() {
             cap2.velocityY = +10;
         } else if (monkey1.isTouching(cap2)) {
             if(dropING2 === 'no'){
-            dropING2 = 'yes;
+            dropING2 = 'yes';
             }
             cap2.y = monkey1.y - 40;
             cap2.x = monkey1.x;
