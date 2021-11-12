@@ -733,6 +733,7 @@ function draw() {
 
         if (dropING === 'yes') {
             drop.play();
+            dropING = 'no';
         }
 
         backButton.mousePressed(function () {
